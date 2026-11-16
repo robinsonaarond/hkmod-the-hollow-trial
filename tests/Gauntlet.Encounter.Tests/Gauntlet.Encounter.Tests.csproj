@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><Nullable>disable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Gauntlet.Core/Gauntlet.Core.csproj" />
+    <Compile Include="../../src/Gauntlet.Mod/BenchlessCharms.cs" Link="BenchlessCharms.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/CardFreeze.cs" Link="CardFreeze.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/StageSpike.cs" Link="StageSpike.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/BrokenVessel.cs" Link="BrokenVessel.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/WaveBell.cs" Link="WaveBell.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/EnemyEngagement.cs" Link="EnemyEngagement.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/NativeBoss.cs" Link="NativeBoss.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/SoulTyrantArena.cs" Link="SoulTyrantArena.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/ArenaCeiling.cs" Link="ArenaCeiling.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/ArenaLayouts.cs" Link="ArenaLayouts.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/UiClockSettings.cs" Link="UiClockSettings.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/BlueHealthHud.cs" Link="BlueHealthHud.cs" />
+    <Compile Include="../../src/Gauntlet.Mod/HealthHud.cs" Link="HealthHud.cs" />
+  </ItemGroup>
+</Project>

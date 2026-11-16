@@ -1,0 +1,9 @@
+.tools/
+.local/
+artifacts/
+**/bin/
+**/obj/
+.DS_Store
+
+# Unrelated local website project
+/sites/

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Gauntlet</AssemblyName>
+    <Version>0.14.0</Version>
+    <EnableDefaultItems>true</EnableDefaultItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <ProjectReference Include="../Gauntlet.Core/Gauntlet.Core.csproj" />
+    <EmbeddedResource Include="Assets/card-frame.png" LogicalName="Gauntlet.card-frame.png" />
+    <EmbeddedResource Include="Assets/gauntlet-idol.png" LogicalName="Gauntlet.idol.png" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(ApiManagedPath)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MMHOOK_Assembly-CSharp"><HintPath>$(ApiManagedPath)/MMHOOK_Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MonoMod.Utils"><HintPath>$(ApiManagedPath)/MonoMod.Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Mono.Cecil"><HintPath>$(ApiManagedPath)/Mono.Cecil.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="PlayMaker"><HintPath>$(GameManagedPath)/PlayMaker.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="$(GameManagedPath)/UnityEngine*.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(ApiManagedPath)/Assembly-CSharp.dll')" Text="Set ApiManagedPath to the extracted legacy Modding API v77 directory." />
+    <Error Condition="!Exists('$(GameManagedPath)/UnityEngine.dll')" Text="Set GameManagedPath to the Managed directory of Hollow Knight 1.5.78.11833." />
+  </Target>
+</Project>
